@@ -13,6 +13,7 @@ const loginRouter = require("./routes/login");
 
 const roleRouter = require("./routes/roles");
 const permissionRouter = require("./routes/permission");
+const typeOfFoodRouter = require("./routes/typeOfFood");
 
 
 const app = express();
@@ -33,6 +34,7 @@ app.use("/category", categoryRouter);
 app.use("/product", productRouter);
 app.use("/basket", basketRouter)
 
+app.use("/typeOfFood", typeOfFoodRouter)
 
 
 const PORT = process.env.PORT || 5000;
