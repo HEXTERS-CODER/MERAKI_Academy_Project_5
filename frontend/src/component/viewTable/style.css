@@ -1,18 +1,9 @@
 .views{
     height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 
-.back{
-    height: 3.5rem;
-    width: 15rem;
-    position:relative;
-    margin-top: 18rem;
-    margin-left: 79rem;
-    background-color: rgba(255, 248, 220, 0);
-    color: rgb(215, 94, 33);
-border: 1px solid coral;
-
-  
-}

@@ -25,12 +25,15 @@ const ViewTable = () => {
   const navigate = useNavigate();
   const getOrders = () => {
     axios
-      .get(`https://bigbites-backend.herokuapp.com/users/${orderState.id}`)
+      .get(
+        `https://bigbites-backend.herokuapp.com/order/users/${orderState.id}`
+      )
       .then((result) => {
         console.log(result.data.result);
         dispatch(addOrder(result.data.result));
       })
       .catch((err) => {
+        console.log("test", orderState.id);
         console.log(err);
       });
   };
@@ -79,14 +82,6 @@ const ViewTable = () => {
                 })}
             </table>
           </div>
-          <button
-            className="back"
-            onClick={() => {
-              navigate("/UserAdminPanel");
-            }}
-          >
-            Back to user AdminPanel
-          </button>
         </>
       ) : (
         <div>
